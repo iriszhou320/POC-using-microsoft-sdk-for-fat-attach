@@ -46,6 +46,7 @@ const payload = {
 }
 
 async function uploadAndSend(): Promise<any> {
+    //when using the token provided by our lever-microsoft, this will be a delegated auth-flow and we will be able to call /me/messages
     const draftMessage =  await client.api("/users/sadmin@levertest-native365.com/messages")
         .header('Prefer','IdType="ImmutableId"')
         .post(message);
