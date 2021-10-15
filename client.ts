@@ -3,12 +3,12 @@ const { Client } = require("@microsoft/microsoft-graph-client");
 const { TokenCredentialAuthenticationProvider } = require("@microsoft/microsoft-graph-client/authProviders/azureTokenCredentials");
 const { AuthorizationCodeCredential, ClientSecretCredential, } = require("@azure/identity");
 
-const clientId = 'go to Azure AD and find it'; //client id of the registered application
+const clientId = 'in Azure AD'; //client id of the registered application
 const scopes: string[] = [
     'https://graph.microsoft.com/.default'
 ]
-const tenantId = 'go to Azure AD and find it';
-const clientSecret = 'go to Azure AD and find it';
+const tenantId = 'in Azure AD';
+const clientSecret = 'in Azure AD';
 
 const credential = new ClientSecretCredential(tenantId, clientId, clientSecret);
 const authProvider = new TokenCredentialAuthenticationProvider(credential,  {
