@@ -33,8 +33,8 @@ const fileUploadOptions = {
     }
 };
 
-const file = fs.createReadStream('./resources/bigPDF.pdf');
-const stats = fs.statSync("./resources/bigPDF.pdf");
+const file = fs.createReadStream('./bigPDF.pdf');
+const stats = fs.statSync("./bigPDF.pdf");
 const totalSize = stats.size;
 
 const payload = {
